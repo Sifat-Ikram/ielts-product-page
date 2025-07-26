@@ -79,8 +79,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full sticky top-0 shadow bg-white">
-      <div className="flex items-center justify-between px-10 md:px-8 lg:px-10">
+    <nav className="w-full sticky top-0 shadow bg-gray-50">
+      <div className="flex items-center justify-between px-10 md:px-8 lg:px-5">
         <div className="flex items-center space-x-1">
           {/* Mobile Nav Menu on Hover */}
           <div className="relative lg:hidden py-5">
@@ -139,11 +139,11 @@ export default function Navbar() {
               width={10}
               height={10}
               priority
-              className="h-6 w-14 sm:h-8 sm:w-20 md:h-10 md:w-[130px]"
+              className="h-6 w-14 sm:h-8 sm:w-20 md:h-7 md:w-[130px]"
             />
 
             {/* Search Bar */}
-            <div className="hidden md:flex items-center border border-gray-600 rounded-full px-5 py-2 w-[250px] lg:w-[300px] bg-gray-100">
+            <div className="hidden md:flex items-center border rounded-full px-5 py-2 w-[250px] lg:w-[300px]">
               <SearchIcon className="w-8 h-8 text-gray-500 mr-2" />
               <input
                 type="text"

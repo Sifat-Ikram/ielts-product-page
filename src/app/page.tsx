@@ -1,6 +1,6 @@
 "use client";
-
 import Hero from "@/components/Hero";
+import SectionContent from "@/components/SectionContent";
 import { useProduct } from "@/lib/api";
 
 export default function Home() {
@@ -17,13 +17,13 @@ export default function Home() {
   if (!product) {
     return <div>No product found</div>;
   }
-  console.log(product);
-  
 
   return (
     <div>
       <Hero title={product?.title} description={product?.description} />
-      <div className="px-3 sm:px-5 md:w-5/6 mx-auto"></div>
+      <div className="px-3 sm:px-5 md:w-11/12 mx-auto">
+        <SectionContent sections={product.sections} />
+      </div>
     </div>
   );
 }

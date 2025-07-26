@@ -1,0 +1,49 @@
+import { Section } from "@/type/product";
+import Image from "next/image";
+import { FaChevronRight } from "react-icons/fa6";
+
+interface Instructor {
+  name: string;
+  image: string;
+  short_description?: string;
+  description?: string;
+  slug?: string;
+  has_instructor_page?: boolean;
+}
+
+export type InstructorSection = Omit<Section, "type" | "values"> & {
+  type: "instructors";
+  values: Instructor[];
+};
+
+export default function InstructorAndNeed(props: { section: unknown }) {
+  const section = props.section as InstructorSection;
+  console.log(section);
+  const instructor = section?.values?.[0];
+
+  if (!instructor) return null;
+
+  return (
+    <div className="space-y-2">
+      <h1 className="text-2xl font-semibold">{section.name}</h1>
+      <div className="border-[1px] border-gray-400 rounded-sm px-5 py-8 flex items-center space-x-5">
+        <Image
+          src={instructor.image}
+          alt={instructor.name}
+          width={120}
+          height={120}
+          className="rounded-full object-cover"
+        />
+        <div>
+          <h1 className="hover:text-green-400 text-lg font-semibold flex items-center">
+            {instructor.name}
+            <FaChevronRight className="ml-1 text-sm font-bold" />
+          </h1>
+          <div
+            dangerouslySetInnerHTML={{ __html: instructor.description || "" }}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
