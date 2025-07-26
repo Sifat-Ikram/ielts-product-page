@@ -1,24 +1,24 @@
-import Link from 'next/link'
-
 interface HeroProps {
-  title: string
-  price: number
+  title: string;
+  description: string;
 }
 
-export default function Hero({ title, price }: HeroProps) {
+export default function Hero({ title, description }: HeroProps) {
   return (
-    <section className="pt-20 pb-16 text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-      <h1 className="text-4xl md:text-5xl font-extrabold mb-4">{title}</h1>
-      <p className="text-xl mb-6">Complete IELTS preparation course</p>
-      <div className="flex justify-center items-center space-x-4">
-        <span className="text-3xl font-bold">৳ {price}</span>
-        <Link
-          href="#enroll"
-          className="px-6 py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow hover:shadow-lg transition"
-        >
-          Enroll Now
-        </Link>
+    <section className="bg-gradient-to-t from-[#1D1E3D] to-[#090B2A] text-white">
+      <div className="px-3 sm:px-5 md:w-5/6 mx-auto text-left">
+        <div className="w-full lg:w-2/3 py-10 space-y-3">
+          <h1 className="text-lg md:text-xl lg:text-3xl font-semibold text-white">{title}</h1>
+          <p className="text-white text-sm md:text-base lg:text-lg font-medium flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+            <span className="text-yellow-400">★★★★★</span>
+            (82.6% শিক্ষার্থী কোর্স শেষে ৫ রেটিং দিয়েছেন)
+          </p>
+          <div
+            className="text-sm md:text-sm lg:text-base leading-7 text-gray-400 lg:mr-[28px]"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
+        </div>
       </div>
     </section>
-  )
+  );
 }

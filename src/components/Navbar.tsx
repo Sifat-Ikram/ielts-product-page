@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import logo from "../assets/10mslogo-svg.svg";
@@ -79,7 +80,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full sticky top-0 shadow bg-white">
-      <div className="flex items-center justify-between w-11/12 mx-auto">
+      <div className="flex items-center justify-between px-10 md:px-8 lg:px-10">
         <div className="flex items-center space-x-1">
           {/* Mobile Nav Menu on Hover */}
           <div className="relative lg:hidden py-5">
@@ -177,7 +178,7 @@ export default function Navbar() {
               {/* Dropdown */}
               <ul className="absolute -left-1/2 top-full z-20 hidden group-hover:block bg-white shadow-lg rounded-md min-w-[160px]">
                 {item.children?.map((child, i) => (
-                  <>
+                  <React.Fragment key={i}>
                     {/* 5th item */}
                     <li
                       key={i}
@@ -192,7 +193,7 @@ export default function Navbar() {
                         aria-hidden="true"
                       />
                     )}
-                  </>
+                  </React.Fragment>
                 ))}
               </ul>
             </li>
