@@ -7,7 +7,7 @@ export default function Hero({ title, description }: HeroProps) {
   return (
     <section className="bg-gradient-to-t from-[#1D1E3D] to-[#090B2A] text-white">
       <div className="px-3 sm:px-5 md:w-11/12 mx-auto text-left">
-        <div className="w-full lg:w-2/3 py-10 space-y-3">
+        <div className="w-full lg:w-2/3 py-20 space-y-3">
           <h1 className="text-lg md:text-xl lg:text-3xl font-semibold text-white">{title}</h1>
           <p className="text-white text-sm md:text-base lg:text-lg font-medium flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
             <span className="text-yellow-400">★★★★★</span>

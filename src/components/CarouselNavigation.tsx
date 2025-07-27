@@ -50,7 +50,7 @@ export default function CarouselNavigation({
   );
 
   return (
-    <div className="bg-white sticky top-0 z-40 py-2 shadow-sm">
+    <div className="bg-white sticky top-[76px] z-40 py-4 px-3 shadow-sm border-b-[1px] border-gray-400">
       <div className="relative">
         {/* Swiper */}
         <Swiper
