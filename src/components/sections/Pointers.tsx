@@ -15,9 +15,9 @@ export type PointerSection = Omit<Section, "type" | "values"> & {
 
 export default function Pointers(props: { section: unknown }) {
   const section = props.section as PointerSection;
-  const groupJoin = section?.values?.[0];
+  const pointer = section?.values?.[0];
 
-  if (!groupJoin) return null;
+  if (!pointer) return null;
   return (
     <div className="space-y-5">
       <h2 className="text-2xl font-semibold">{section.name}</h2>

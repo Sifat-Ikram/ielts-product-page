@@ -1,7 +1,11 @@
 export interface Medium {
-  id: number;
-  url: string;
-  type: string;
+  name: string;
+  title: string;
+  instructor: string;
+  price: string;
+  resource_type: "image" | "video";
+  resource_value: string;
+  thumbnail_url?: string;
 }
 
 export interface Checklist {

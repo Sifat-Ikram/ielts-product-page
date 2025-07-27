@@ -50,7 +50,7 @@ export default function CarouselNavigation({
   );
 
   return (
-    <div className="bg-white sticky top-[76px] z-40 py-4 px-3 shadow-sm border-b-[1px] border-gray-400">
+    <div className="bg-white hidden md:block sticky top-[76px] z-50 py-4 px-3 shadow-sm border-b-[1px] border-gray-400">
       <div className="relative">
         {/* Swiper */}
         <Swiper
@@ -76,7 +76,7 @@ export default function CarouselNavigation({
             <SwiperSlide key={section.type} className="w-auto">
               <button
                 onClick={() => handleClick(section.type)}
-                className="text-center text-sm whitespace-nowrap"
+                className="text-center text-sm whitespace-nowrap cursor-pointer"
               >
                 {section.name}
               </button>
