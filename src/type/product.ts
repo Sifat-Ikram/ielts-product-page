@@ -9,9 +9,11 @@ export interface Medium {
 }
 
 export interface Checklist {
-  id: number;
-  title: string;
-  is_checked: boolean;
+  id: string;
+  icon: string;
+  text: string;
+  color: string;
+  list_page_visibility: boolean;
 }
 
 export interface Seo {
