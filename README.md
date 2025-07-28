@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IELTS Course Landing Page – 10 Minute School
 
-## Getting Started
+This is a fully responsive product landing page for the **IELTS Course by Munzereen Shahid**, built as part of the **Frontend Engineer (Level 1)** assessment.
 
-First, run the development server:
+Live Page: [https://10minuteschool.com/product/ielts-course/](https://ielts-course-with-munzereen.vercel.app/)
+
+---
+
+## 🚀 Tech Stack
+
+- **Framework**: [Next.js 14+ (App Router)](https://nextjs.org/)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **SEO & Metadata**: Dynamic using API data
+- **Deployment**: Vercel
+- **Bonus**: ISR (Incremental Static Regeneration), SSR (Server-side Rendering)
+
+---
+
+## ✅ Features Implemented
+
+- **Course Title & HTML Description**
+- **Course Trailer**: YouTube embed from API
+- **Course Instructors**: Rendered from section type `instructor`
+- **Course Features**: `features` section
+- **What You Will Learn**: `pointers` section
+- **About This Course**: `about` section
+- **Checklist Items**
+- **Call to Action (CTA)**: from API
+- **Localization Ready**: API supports `lang=en/bn`
+- **Dynamic SEO**: Using `generateMetadata()` from API’s SEO field
+- **Default Price Used**: 1000 (as per instruction)
+
+---
+## 🧪 How to Run Locally
 
 ```bash
+# Clone the repo
+git clone https://github.com/your-username/ielts-course-landing.git
+cd ielts-course-landing
+
+# Install dependencies
+npm install
+
+# Run locally
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
