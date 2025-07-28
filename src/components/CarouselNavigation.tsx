@@ -89,7 +89,7 @@ export default function CarouselNavigation({
           ref={prevRef}
           aria-label="Scroll left"
           className={`absolute -left-10 top-1/2 -translate-y-1/2 cursor-pointer z-50 p-2 rounded-full ${
-            isBeginning ? "bg-gray-200" : "bg-gray-500"
+            isBeginning ? "bg-gray-500" : "bg-gray-500"
           }`}
         >
           <FiChevronLeft size={20} className="text-white" />
@@ -98,7 +98,7 @@ export default function CarouselNavigation({
           ref={nextRef}
           aria-label="Scroll right"
           className={`absolute right-0 top-1/2 -translate-y-1/2 cursor-pointer z-50 p-2 rounded-full ${
-            isEnd ? "bg-gray-200" : "bg-gray-500"
+            isEnd ? "bg-gray-500" : "bg-gray-500"
           }`}
         >
           <FiChevronRight size={20} className="text-white" />

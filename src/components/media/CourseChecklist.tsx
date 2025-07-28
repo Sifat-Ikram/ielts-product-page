@@ -3,11 +3,18 @@ import { Checklist } from "@/type/product";
 
 interface Props {
   checklist: Checklist[];
+  variant?: "default" | "inline";
 }
 
-const CourseChecklist: React.FC<Props> = ({ checklist }) => {
+const CourseChecklist: React.FC<Props> = ({ checklist, variant }) => {
   return (
-    <div className="w-full p-4 border-x border-b rounded-lg shadow-sm space-y-4">
+    <div
+      className={`w-full p-4 space-y-4 transition-all duration-300 ${
+        variant === "inline"
+          ? "border-x border-b border-gray-300"
+          : "border border-gray-300 rounded-xl shadow"
+      }`}
+    >
       {/* Price & Discount */}
       <div className="text-xl font-bold text-gray-800 flex items-center gap-3">
         <span className="text-black text-2xl">৳3850</span>
@@ -22,12 +29,9 @@ const CourseChecklist: React.FC<Props> = ({ checklist }) => {
       </div>
 
       {/* CTA Button */}
-      <button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded font-bold transition duration-200">
+      <button className="w-full bg-green-500 border-b-2 border-green-700 hover:bg-green-600 text-white py-2 rounded font-bold transition duration-200">
         কোর্সটি কিনুন
       </button>
-
-      {/* Divider */}
-      <hr />
 
       {/* Checklist Title */}
       <h3 className="font-semibold text-lg text-gray-800">

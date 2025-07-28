@@ -7,7 +7,7 @@ import apple from "../assets/apple.jpeg";
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-black py-10">
+    <footer className="bg-white text-black py-3 sm:py-6 md:py-10">
       <div className="w-11/12 mx-auto flex flex-col lg:flex-row gap-8">
         {/* Logo and App Links */}
         <div className="space-y-4 w-full lg:w-1/4">
@@ -82,8 +82,8 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="flex flex-col items-center">
-            <h3 className="font-bold max-sm:text-center text-nowrap text-base md:text-lg mb-4">
+          <div className="flex flex-col items-center justify-center">
+            <h3 className="font-bold max-sm:text-center text-nowrap text-sm sm:text-base md:text-lg mb-4">
               আমাদের যোগাযোগ মাধ্যম
             </h3>
             <div className="hidden md:flex flex-col text-sm md:text-base space-y-2">
@@ -114,7 +114,7 @@ export default function Footer() {
             </div>
 
             {/* Social Icons */}
-            <div className="flex gap-4 mt-4 text-lg md:text-xl text-black">
+            <div className="flex items-center gap-4 mt-4 text-lg md:text-xl text-black">
               <a
                 href="#"
                 className="rounded-md bg-black p-2 text-lg text-white"

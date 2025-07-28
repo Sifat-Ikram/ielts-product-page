@@ -58,7 +58,7 @@ const CourseCarousel: React.FC<Props> = ({ media }) => {
         <button
           ref={prevRef}
           aria-label="Previous"
-          className="absolute z-10 top-1/2 -translate-y-1/2 left-2 bg-white shadow p-2 rounded-full"
+          className="absolute z-10 top-1/2 -translate-y-1/2 left-2 bg-white text-gray-600 shadow p-1 rounded-full"
         >
           <FiChevronLeft size={24} />
         </button>
@@ -66,7 +66,7 @@ const CourseCarousel: React.FC<Props> = ({ media }) => {
         <button
           ref={nextRef}
           aria-label="Next"
-          className="absolute z-10 top-1/2 -translate-y-1/2 right-2 bg-white shadow p-2 rounded-full"
+          className="absolute z-10 top-1/2 -translate-y-1/2 right-2 bg-white text-gray-600 shadow p-1 rounded-full"
         >
           <FiChevronRight size={24} />
         </button>

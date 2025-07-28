@@ -43,6 +43,19 @@ export default function GroupJoinEngagement(props: { section: unknown }) {
         color: groupJoin.description_color || "#fff",
       }}
     >
+      {/* Invisible sentinel for intersection observer */}
+      <div
+        id="groupJoinSentinel"
+        style={{
+          height: 1,
+          width: "100%",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          pointerEvents: "none",
+          opacity: 0,
+        }}
+      />
       <div className="w-full md:w-1/2 space-y-5">
         <Image
           src={groupJoin?.top_left_icon_img}
@@ -66,7 +79,12 @@ export default function GroupJoinEngagement(props: { section: unknown }) {
         </a>
       </div>
       <div className="hidden md:flex w-1/2 space-y-5">
-        <Image src={groupJoin?.thumbnail} alt="thumbnail" height={300} width={500} />
+        <Image
+          src={groupJoin?.thumbnail}
+          alt="thumbnail"
+          height={300}
+          width={500}
+        />
       </div>
     </div>
   );

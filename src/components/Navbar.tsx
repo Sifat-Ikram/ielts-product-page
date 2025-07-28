@@ -79,7 +79,10 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full sticky top-0 shadow bg-gray-50 z-50">
+    <nav
+      id="navbar"
+      className="w-full md:sticky md:top-0 shadow bg-gray-50 z-50"
+    >
       <div className="flex items-center justify-between px-10 md:px-8 lg:px-5">
         <div className="flex items-center space-x-1">
           {/* Mobile Nav Menu on Hover */}
